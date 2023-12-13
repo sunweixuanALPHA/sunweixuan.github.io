@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CS2308新生实践课班级主页</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            background-image: url(images/image2.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+        }
+        
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 1em;
+            text-align: center;
+        }
+        
+        nav {
+            background-color: #666;
+            padding: 1em;
+            text-align: center;
+        }
+        
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 1em;
+        }
+        
+        section {
+            padding: 7em;
+        }
+        
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1em;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>班级主页</h1>
+    </header>
+
+    <nav>
+        <a href="#home">班级主页</a>
+        <a href="#page1">东十三605</a>
+        <a href="#page2">东十三606</a>
+        <a href="#page3">东十三607</a>
+        <a href="#page4">东十三608</a>
+        <a href="#page5">东十三609</a>
+        <a href="#page6">东十三612</a>
+        <a href="#page7">东九427</a>
+        <a href="#page8">东九428</a>
+        <a href="#page9">其他</a>
+    </nav>
+
+    <section id="home">
+        <h2>欢迎来到班级主页</h2>
+        <p>
+
+        </p>
+        <img width="60%" src="images/image1.jpg"></img>
+    </section>
+
+    <section id="page1" style="display: none;">
+        <h2>东十三605</h2>
+        <p>这是页面1的内容。</p>
+    </section>
+
+    <section id="page2" style="display: none;">
+        <h2>东十三606</h2>
+        <p>这是页面2的内容。</p>
+    </section>
+
+    <section id="page3" style="display: none;">
+        <h2>东十三607</h2>
+        <p>这是页面3的内容。</p>
+    </section>
+
+    <section id="page4" style="display: none;">
+        <h2>东十三608</h2>
+        <p>这是页面1的内容。</p>
+    </section>
+    <section id="page5" style="display: none;">
+        <h2>东十三609</h2>
+        <p>这是页面1的内容。</p>
+    </section>
+    <section id="page6" style="display: none;">
+        <h2>东十三612</h2>
+        <p>这是页面1的内容。</p>
+    </section>
+    <section id="page7" style="display: none;">
+        <h2>东九427</h2>
+        <p>这是页面1的内容。</p>
+    </section>
+    <section id="page8" style="display: none;">
+        <h2>东九427</h2>
+        <p>这是页面1的内容。</p>
+    </section>
+    <section id="page9" style="display: none;">
+        <h2>东九428</h2>
+        <p>这是页面1的内容。</p>
+    </section>
+
+    <footer>
+        <p>&copy; CS2308 班级主页</p>
+    </footer>
+
+    <script>
+        // JavaScript代码，用于实现页面之间的切换
+        function showPage(pageId) {
+            // 隐藏所有页面
+            document.querySelectorAll('section').forEach(function(section) {
+                section.style.display = 'none';
+            });
+
+            // 显示特定的页面
+            document.getElementById(pageId).style.display = 'block';
+        }
+
+        // 默认显示首页
+        showPage('home');
+
+        // 监听导航链接的点击事件，并调用showPage函数
+        document.querySelectorAll('nav a').forEach(function(link) {
+            link.addEventListener('click', functio n(e) {
+                e.preventDefault();
+                showPage(link.getAttribute('href').substring(1));
+            });
+        });
+    </script>
+
+</body>
+
+</html>
